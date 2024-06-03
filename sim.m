@@ -9,6 +9,10 @@ function [N0,N1,N2,times] = sim(n0,n1,n2,t,type)
     if type == "lin"
         K = Inf;
         b = 38/39165;
+    elseif type == "zero"
+        K = Inf;
+        b = 0;
+        a = 0;
     else
         K = 25;
         b = (25/7)*(38/39165);
